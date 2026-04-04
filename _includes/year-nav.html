@@ -1,0 +1,12 @@
+{% assign current_year = page.date | date: "%Y" %}
+<nav class="year-nav">
+  <h3 class="nav__title">Browse by Year</h3>
+  <ul>
+    {% assign years = "2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009" | split: "," %}
+    {% for year in years %}
+      <li{% if current_year == year %} class="active"{% endif %}>
+        <a href="/{{ year }}/">{{ year }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

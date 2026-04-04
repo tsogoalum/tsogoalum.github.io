@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Tsogo Alumni Society skin
+   Green: #16b513  |  Gold: #f0c040  |  Dark: #1a2a1a
+   ========================================================================== */
+
+$background-color: #fff !default;
+$text-color: #333 !default;
+$muted-text-color: #666 !default;
+$primary-color: #16b513 !default;
+$border-color: #d0d0d0 !default;
+$footer-background-color: #1a2a1a !default;
+$link-color: #0e8f0b !default;
+$link-color-hover: #0a6608 !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: #16b513 !default;
+$navicon-link-color-hover: #eee !default;
+
+/* Masthead gets a dark green top bar */
+.masthead {
+  border-bottom: 3px solid #16b513;
+}
+
+.page__footer {
+  color: #ccc !important;
+
+  a {
+    color: #7ed87c !important;
+    &:hover { color: #fff !important; }
+  }
+}
+
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
+
+/* Archive notice banner */
+.archive-notice-bar {
+  background: linear-gradient(135deg, #1a2a1a, #16b513);
+  color: #fff;
+  text-align: center;
+  padding: 0.6em 1.5em;
+  font-size: 0.85em;
+  a { color: #c8f7c7; &:hover { color: #fff; } }
+  strong { color: #f0c040; }
+}
+
+/* Gold accent for headings on archive pages */
+.archive__item-title a:hover {
+  color: #16b513;
+}
+
+/* Year headings in posts layout */
+.list__item h2 {
+  border-bottom: 2px solid #f0c040;
+  padding-bottom: 0.2em;
+}
+
+/* Homepage content section */
+.home-content {
+  max-width: 800px;
+  margin: 2em auto;
+
+  h2 {
+    border-bottom: 2px solid #f0c040;
+    padding-bottom: 0.3em;
+    margin-top: 1.8em;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 2em 0;
+  }
+
+  ul {
+    margin-left: 1.5em;
+  }
+}
+
+/* Year navigation sidebar */
+.year-nav {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em;
+  }
+  li a {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    border: 1px solid #16b513;
+    border-radius: 3px;
+    font-size: 0.85em;
+    color: #16b513;
+    text-decoration: none;
+    &:hover {
+      background: #16b513;
+      color: #fff;
+    }
+  }
+  li.active a {
+    background: #16b513;
+    color: #fff;
+  }
+}

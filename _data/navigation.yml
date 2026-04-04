@@ -1,0 +1,39 @@
+years:
+  - title: "Browse by Year"
+    children:
+      - title: "All Years"
+        url: /year-archive/
+      - title: "2020"
+        url: /year-archive/#2020
+      - title: "2019"
+        url: /year-archive/#2019
+      - title: "2018"
+        url: /year-archive/#2018
+      - title: "2017"
+        url: /year-archive/#2017
+      - title: "2016"
+        url: /year-archive/#2016
+      - title: "2015"
+        url: /year-archive/#2015
+      - title: "2014"
+        url: /year-archive/#2014
+      - title: "2013"
+        url: /year-archive/#2013
+      - title: "2012"
+        url: /year-archive/#2012
+      - title: "2011"
+        url: /year-archive/#2011
+      - title: "2010"
+        url: /year-archive/#2010
+      - title: "2009"
+        url: /year-archive/#2009
+
+main:
+  - title: "Blog"
+    url: /
+  - title: "Society"
+    url: /society/
+  - title: "Executive"
+    url: /society/executive/
+  - title: "About"
+    url: /about/

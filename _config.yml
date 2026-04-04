@@ -1,0 +1,79 @@
+title: "Tsogo Alumni Society"
+subtitle: "Tsogo High/Secondary School Alumni — NPO Registration No. 053-952-NPO"
+description: "Archive of the Tsogo Alumni Society website, preserving content from 2009 to 2020."
+url: "https://tsogoalumni.org.za"
+baseurl: ""
+
+# Theme
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "tsogo"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:slug/
+
+# Pagination
+paginate: 10
+paginate_path: "/page/:num/"
+
+# Logo
+logo: "/assets/images/tsogo-logo.jpg"
+
+# Author (site-wide default)
+author:
+  name: "Tsogo Alumni Society"
+  bio: "Archive of the Tsogo Alumni Society website (2009–2020). The society is currently on hiatus."
+  location: "South Africa"
+  avatar: "/assets/images/tsogo-logo.jpg"
+
+# Archive notice (shown site-wide)
+archive_notice: >
+  This is a preserved archive of the Tsogo Alumni Society website.
+  Content spans 2009–2020. The society is currently on hiatus.
+  Some features (comments, forms, search) are no longer active.
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Navigation
+header_pages:
+  - about.md
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author: "Tsogo Alumni Society"
+      author_profile: false
+      read_time: false
+      share: false
+      comments: false
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-include-cache
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - convert.py
+  - "*.zip"
