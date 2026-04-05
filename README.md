@@ -35,30 +35,42 @@ This repository contains the Jekyll source for the archived Tsogo Alumni Society
 ### Site structure
 
 ```
-tsogo-jekyll-archive/
-├── _config.yml           # Jekyll + Minimal Mistakes configuration
-├── _posts/               # 90 blog posts as Markdown (YYYY-MM-DD-slug.md)
-├── _pages/               # Static pages (about, society, executive, year archive)
-├── _data/navigation.yml  # Site navigation
-├── _includes/            # Archive notice banner, year nav
-├── _sass/                # Custom Tsogo brand skin (green #16b513 + gold #f0c040)
+tsogoalum.github.io/
+├── _config.yml                        # Jekyll configuration
+├── _posts/                            # 90 blog posts as Markdown (YYYY-MM-DD-slug.md)
+├── _pages/                            # Static pages (about, society, executive, year archive)
+├── _data/
+│   ├── navigation.yml                 # Site navigation menus
+│   └── ui-text.yml                    # Theme UI strings
+├── _includes/                         # Theme includes + custom archive notice banner
+├── _layouts/                          # Theme layouts (bundled locally)
+├── _sass/
+│   ├── minimal-mistakes.scss          # Theme SASS entry point
+│   ├── minimal-mistakes/
+│   │   ├── skins/_tsogo.scss          # Custom Tsogo brand skin
+│   │   └── _vendor/                   # Bundled SASS vendor libs (breakpoint, susy, magnific-popup)
+│   └── ...
 ├── assets/
-│   ├── css/main.scss     # SASS entry point
-│   └── images/           # Logo and images
-├── index.md              # Homepage (splash layout)
-├── CNAME                 # Custom domain: tsogoalumni.org.za
-├── Gemfile               # Ruby gem dependencies
-└── convert.py            # Script used to convert HTML archive → Markdown
+│   ├── css/main.scss                  # SASS entry point (imports skin + theme)
+│   ├── images/tsogo-logo.jpg          # Society logo (from @tsogoalum Twitter)
+│   └── js/                            # Theme JavaScript
+├── .github/workflows/deploy.yml       # GitHub Actions deployment workflow
+├── index.md                           # Homepage (splash layout)
+├── CNAME                              # Custom domain: tsogoalumni.org.za
+├── Gemfile                            # Ruby gem dependencies
+└── convert.py                         # Script used to convert HTML archive → Markdown
 ```
 
 ---
 
 ## Theme
 
-Built with [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) Jekyll theme with a custom `tsogo` skin matching the original site's brand colours:
+Built with [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) v4.28.0. The theme files are **bundled directly in this repository** (no gem install required), which ensures compatibility with the GitHub Pages builder.
+
+Custom `tsogo` skin matches the original site's brand colours:
 
 - **Green** `#16b513` — primary colour, links, navigation
-- **Gold** `#f0c040` — accent colour, headings on archive pages
+- **Gold** `#f0c040` — accent colour, section headings
 - **Dark** `#1a2a1a` — footer and hero overlay
 
 ---
@@ -76,13 +88,20 @@ bundle exec jekyll serve --livereload
 # Visit http://localhost:4000
 ```
 
+No additional theme gems are required — all theme files are in the repository.
+
 ---
 
 ## Deployment
 
-The site deploys automatically via **GitHub Pages** on every push to `main`.
+The site deploys automatically via **GitHub Pages** on every push to `main`, using the GitHub Actions workflow at `.github/workflows/deploy.yml`.
 
-GitHub Pages builds the Jekyll source and serves it at:
+### GitHub Pages setup
+
+In the repository **Settings → Pages**:
+- Source: **GitHub Actions**
+
+The site is served at:
 - **https://tsogoalumni.org.za** (custom domain via CNAME)
 - **https://tsogoalum.github.io** (GitHub Pages default)
 
