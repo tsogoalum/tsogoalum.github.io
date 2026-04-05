@@ -12,10 +12,6 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:slug/
 
-# Pagination
-paginate: 10
-paginate_path: "/page/:num/"
-
 # Logo
 logo: "/assets/images/tsogo-logo.jpg"
 
@@ -66,7 +62,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-paginate
   - jekyll-include-cache
 
 # Exclude
