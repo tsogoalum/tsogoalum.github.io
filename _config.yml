@@ -4,8 +4,7 @@ description: "Archive of the Tsogo Alumni Society website, preserving content fr
 url: "https://tsogoalumni.org.za"
 baseurl: ""
 
-# Theme
-theme: minimal-mistakes-jekyll
+# Theme (files bundled locally — no gem required)
 minimal_mistakes_skin: "tsogo"
 
 # Build settings
