@@ -5,7 +5,7 @@ url: "https://tsogoalumni.org.za"
 baseurl: ""
 
 # Theme
-remote_theme: mmistakes/minimal-mistakes
+theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "tsogo"
 
 # Build settings
@@ -69,7 +69,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-include-cache
-  - jekyll-remote-theme
 
 # Exclude
 exclude:

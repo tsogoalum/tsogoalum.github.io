@@ -9,5 +9,4 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-paginate"
   gem "jekyll-include-cache"
-  gem "jekyll-remote-theme"
 end
